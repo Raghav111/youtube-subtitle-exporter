@@ -4,7 +4,7 @@ const port = process.env.PORT || 5000;
 
 const textImporter = require('./youtube/textImporter');
 
-app.get('/:query', (req, res) => {
+app.get('/client/src/app.js', (req, res) => {
   textImporter(req.params.query).then((result)=>{
     res.send({ 
       express: result.data,
